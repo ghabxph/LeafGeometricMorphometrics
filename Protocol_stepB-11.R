@@ -2,11 +2,11 @@
 
 # This script converts the master spreadsheet (in which each landmark is listed one after the other) into a format in which each leaf is assigned a single row, with its landmarks as columns. Note that this example uses 17 landmarks and parameters must be changed in order to fit your dataset.
 
-data <- read.table(masterspreadsheet.txt, header=TRUE)
+data <- read.table('./masterspreadsheet.txt', header=TRUE)
 
 len <- length(data$X)
   
-overall.table <- matrix(nrow=len/17, ncol=(17*2)+1)
+overall.table <- matrix(nrow=len/17, ncol=(17*2)+2)
   
 overall.length <- len/17
   
